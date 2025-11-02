@@ -22,6 +22,9 @@ if __name__ == "__main__":
         print(f"Solving test {test_id}...")
         candidate = solver(*inputs["args"], **inputs["kwargs"])
         print(f"\nexpected output: {np.array(output)}")
-        print(f"\nyour output: {np.array(candidate)}")
+        try:
+            print(f"\nyour output: {np.array(candidate)}")
+        except:
+            print(f"\nyour output: {candidate}")
         print()
         print(f"-"*50)
